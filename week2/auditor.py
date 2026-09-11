@@ -29,6 +29,6 @@ while True:
     else:
         print(f"Accepted. Current total inventory: {total_inventory}")
 
-print("\n--- Inventory Report ---")
-print(f"Total Units Processed: {total_inventory}")
+print("\n-- Inventory Report --")
+print(f"Total Units dProcessed: {total_inventory}")
 print(f"Number of Failed/Rejected Entries: {failed_entries}")
