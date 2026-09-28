@@ -43,6 +43,12 @@ def display_orders(orders):
         print(f"{order['id']}, {order['product']}, {order['quantity']}")
 
 
+def get_next_order_id(orders):
+    """Return the next order ID, based on the highest existing ID."""
+    if not orders:
+        return 1001
+    return max(order["id"] for order in orders) + 1
+
 
 def get_valid_input():
     """Prompt for product name and quantity.
