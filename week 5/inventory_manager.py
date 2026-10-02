@@ -10,7 +10,20 @@ LINE = "-" * 48
 
 
 # ---------- Data persistence ----------
-
+def load_inventory():
+    """Load inventory.json if it exists, otherwise return an empty list."""
+    if os.path.exists(INVENTORY_FILE):
+        print("inventory.json found.")
+        try:
+            with open(INVENTORY_FILE, "r") as f:
+                inventory = json.load(f)
+            print("Inventory loaded successfully.")
+            return inventory
+        except (json.JSONDecodeError, OSError):
+            print("Could not read inventory.json. Starting with empty inventory.")
+            return []
+    print("inventory.json not found. Starting with empty inventory.")
+    return []
 
 
 def save_inventory(inventory):
@@ -144,6 +157,7 @@ def main():
     print("=" * 40)
     print("INVENTORY MANAGEMENT SYSTEM")
     print("=" * 40)
+    inventory = load_inventory()
     show_menu()
 
     while True:
