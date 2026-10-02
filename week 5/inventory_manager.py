@@ -9,7 +9,18 @@ INVENTORY_FILE = "inventory.json"
 LINE = "-" * 48
 
 
+# ---------- Data persistence ----------
 
+
+
+def save_inventory(inventory):
+    """Write the inventory list to inventory.json."""
+    try:
+        with open(INVENTORY_FILE, "w") as f:
+            json.dump(inventory, f, indent=4)
+        print(f"Inventory saved successfully to {INVENTORY_FILE}.")
+    except OSError as e:
+        print(f"Error saving inventory: {e}")
 
 
 # ---------- Data manipulation ----------
@@ -124,6 +135,8 @@ def show_menu():
     print("2. Add Product")
     print("3. Update Stock")
     print("4. Search Product")
+    print("5. Save Inventory")
+    print("6. Exit")
     print("----------------------------")
 
 
@@ -143,6 +156,15 @@ def main():
             handle_update(inventory)
         elif choice == "4":
             handle_search(inventory)
+        elif choice == "5":
+            print("Saving inventory...")
+            save_inventory(inventory)
+        elif choice == "6":
+            print("Saving inventory before exit...")
+            save_inventory(inventory)
+            print("Thank you for using Inventory Management System.")
+            print("Program terminated.")
+            break
         else:
             print("Invalid option. Please enter 1-6.")
 
