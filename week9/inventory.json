@@ -1,0 +1,7 @@
+[
+    {"id": "ABC02", "name": "Mouse", "price": 20.3, "stock": 123, "type": "physical", "weight": 0.1},
+    {"id": "C002", "name": "Keyboard", "price": 1.2, "stock": 12, "type": "physical", "weight": 0.8},
+    {"id": "p2013", "name": "Speaker", "price": 100.322, "stock": 5, "type": "physical", "weight": 2.5},
+    {"id": "o123", "name": "monitor", "price": 15.23, "stock": 10, "type": "physical", "weight": 4.2},
+    {"id": "D001", "name": "Photo Editor", "price": 49.9, "stock": 999, "type": "digital", "download_size": 850}
+]
