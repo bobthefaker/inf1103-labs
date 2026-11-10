@@ -1,0 +1,14 @@
+{
+    "suppliers": [
+        {"id": "S001", "name": "TechSource Pte Ltd", "email": "sales@techsource.example.com"},
+        {"id": "S002", "name": "SoftWorks Asia", "email": "orders@softworks.example.com"}
+    ],
+    "products": [
+        {"id": "ABC02", "name": "Mouse", "price": 20.3, "stock": 123, "supplier_id": "S001", "type": "physical", "weight": 0.1},
+        {"id": "C002", "name": "Keyboard", "price": 1.2, "stock": 12, "supplier_id": "S001", "type": "physical", "weight": 0.8},
+        {"id": "p2013", "name": "Speaker", "price": 100.322, "stock": 5, "supplier_id": "S001", "type": "physical", "weight": 2.5},
+        {"id": "o123", "name": "monitor", "price": 15.23, "stock": 10, "supplier_id": "S001", "type": "physical", "weight": 4.2},
+        {"id": "D001", "name": "Photo Editor", "price": 49.9, "stock": 999, "supplier_id": "S002", "type": "digital", "download_size": 850},
+        {"id": "D100", "name": "Headset", "price": 12.324, "stock": 120, "supplier_id": "S002", "type": "digital", "download_size": 12.0}
+    ]
+}
